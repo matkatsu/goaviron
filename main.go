@@ -34,9 +34,9 @@ func main() {
 	swg := controller.NewSwaggerController(service)
 	controller.MountSwaggerController(service, swg)
 
-	// Mount "bottle" controller
-	c := controller.NewBottleController(service)
-	app.MountBottleController(service, c)
+	// Mount "viron" controller
+	c := controller.NewVironController(service)
+	app.MountVironController(service, c)
 
 	// コマンド引数で起動ポート・起動ホストを上書きできるようにする
 	port := flag.Int("p", env.Server.PortNum, "port number. default set on config")
