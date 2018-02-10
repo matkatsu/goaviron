@@ -25,6 +25,27 @@
                     "auto_refresh_sec": 3
                 }
             ]
+        },
+        {
+            "section": "manage",
+            "group": "",
+            "id": "user",
+            "name": "ユーザー",
+            "components": [
+                {
+                    "name": "ユーザー",
+                    "style": "table",
+                    "pagination": false,
+                    "table_labels": [
+                        "id",
+                        "name"
+                    ],
+                    "api": {
+                        "method": "get",
+                        "path": "/aikatsu/users"
+                    }
+                }
+            ]
         }
     ]
 }
