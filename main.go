@@ -35,8 +35,12 @@ func main() {
 	controller.MountSwaggerController(service, swg)
 
 	// Mount "viron" controller
-	c := controller.NewVironController(service)
-	app.MountVironController(service, c)
+	v := controller.NewVironController(service)
+	app.MountVironController(service, v)
+
+	// Mount "aikatsu" controller
+	a := controller.NewAikatsuController(service)
+	app.MountAikatsuController(service, a)
 
 	// コマンド引数で起動ポート・起動ホストを上書きできるようにする
 	port := flag.Int("p", env.Server.PortNum, "port number. default set on config")

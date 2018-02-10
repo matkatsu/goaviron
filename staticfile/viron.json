@@ -1,13 +1,13 @@
 {
     "theme": "standard",
     "color": "white",
-    "name": "Viron example - local",
+    "name": "Vironカツドウ！",
     "tags": [
         "local",
         "viron",
-        "example"
+        "aikatsu"
     ],
-    "thumbnail": "https://avatars3.githubusercontent.com/u/23251378?v=3&s=200",
+    "thumbnail": "https://cdn-ak.f.st-hatena.com/images/fotolife/e/elegantgonzares14/20161116/20161116102752.jpg",
     "pages": [
         {
             "section": "dashboard",
@@ -16,51 +16,13 @@
             "name": "クイックビュー",
             "components": [
                 {
+                    "name": "アイカツおじさん数",
+                    "style": "number",
                     "api": {
                         "method": "get",
-                        "path": "/stats/dau"
+                        "path": "/aikatsu/ojisan"
                     },
-                    "name": "DAU",
-                    "style": "number"
-                },
-                {
-                    "api": {
-                        "method": "get",
-                        "path": "/stats/mau"
-                    },
-                    "name": "MAU",
-                    "style": "number"
-                }
-            ]
-        },
-        {
-            "section": "manage",
-            "group": "user",
-            "id": "user",
-            "name": "ユーザー",
-            "components": [
-                {
-                    "api": {
-                        "method": "get",
-                        "path": "/user"
-                    },
-                    "name": "ユーザー",
-                    "style": "table",
-                    "primary": "id",
-                    "pagination": true,
-                    "query": [
-                        {
-                            "key": "name",
-                            "type": "string"
-                        }
-                    ],
-                    "table_labels": [
-                        "id",
-                        "name"
-                    ],
-                    "actions": [
-                        "/user/download/csv"
-                    ]
+                    "auto_refresh_sec": 3
                 }
             ]
         }

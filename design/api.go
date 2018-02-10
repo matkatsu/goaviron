@@ -1,8 +1,8 @@
 package design
 
 import (
+	_ "goaviron/design/resources/aikatsu"
 	_ "goaviron/design/resources/viron"
-
 	"goaviron/env"
 
 	. "github.com/goadesign/goa/design"
@@ -11,7 +11,7 @@ import (
 
 var _ = API("goaviron", func() {
 	Title("goaviron")
-	Description("goa for viron")
+	Description("goa + vironの可能性を探る")
 	Version("1.0")
 	Contact(func() {
 		Name("romiogaku")

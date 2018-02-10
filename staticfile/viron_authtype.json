@@ -1,20 +1,8 @@
 [
     {
-        "method": "POST", 
-        "provider": "viron-example", 
-        "type": "emai", 
-        "url": "/signin"
-    }, 
-    {
-        "method": "POST", 
-        "provider": "google", 
-        "type": "oauth", 
-        "url": "/googlesignin"
-    }, 
-    {
-        "method": "POST", 
+        "method": "GET", 
         "provider": "", 
         "type": "signout", 
-        "url": "/signout"
+        "url": ""
     }
 ]
